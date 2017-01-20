@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 // import {firebase} from 'firebase';
 import * as Firebase from 'firebase';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -18,7 +20,7 @@ public currentUID;
 
 
 
-  constructor() { }
+  constructor(private router:Router, private route: ActivatedRoute) { }
 
   ngOnInit() {
   }
@@ -42,6 +44,9 @@ var provider = new firebase.auth.GoogleAuthProvider();
   if (user) {
     // this.currentUID = user.uid;
     console.log("login")
+    // this.router.navigate(['/addmoviedata']);
+    
+    this.router.navigate(['/addmoviedata'], { relativeTo: this.route })
    
   } else {
     // Set currentUID to null.

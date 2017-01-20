@@ -14,8 +14,7 @@ import {CreatemoviedataComponent} from './createmoviedata/createmoviedata.compon
 // import { HollywoodComponent } from './hollywood/hollywood.component';
 // import {MoviedetailComponent } from './moviedetail/moviedetail.component'
 export const appRoutes: Routes = [
-    {path: '', component:LoginComponent},
-    {path:'addmoviedata',component:CreatemoviedataComponent}
+     {path:'',component:CreatemoviedataComponent}
     // {path: 'movie/:id', component: MovieComponent},
     // {path: 'tv/:id', component: SerieComponent},
     // {path: 'actor/:id', component: ActorComponent},
